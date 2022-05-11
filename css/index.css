@@ -1,0 +1,54 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+main, 
+input[type="number"],
+input[type="number"]:focus,
+::placeholder, 
+section{
+    color: white;
+}
+
+main{
+    background: linear-gradient(250deg, #585DFE 0%, #FB3796 100%);
+}
+
+input[type="number"]{
+    background-color: inherit; /*This will apply the same background from main. 
+    Depends on where this input is. The background color will apply based on its parents. In this case, 
+    the parent is "nmain"*/
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0;
+    margin: 10px 0;
+    width: 320px;
+    border: none;
+}
+
+input[type="number"]:focus{
+    outline: none;
+}
+
+/*Remove Arrows/Spinners*/
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+section{
+    background-color: #1F2937;
+    text-align: center;
+}
